@@ -31,8 +31,8 @@ footer {
 }
 
 header {
-	background: var(--lightAccent);
-	color: var(--darker);
+	background: var(--darker);
+	color: var(--lightAccent);
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
@@ -40,8 +40,7 @@ header {
 
 @media (min-width: 48rem) {
 	header {
-
-		justify-content: center;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		height: auto;
 	}
@@ -49,7 +48,6 @@ header {
 
 .site-title {
 	font-family: var(--accentFont);
-	font-size: 2.1rem;
 	line-height: 1;
 	color: inherit;
 	text-align: center;
@@ -59,8 +57,7 @@ header {
 	font-weight: bold;
 
 	@media (min-width: 48rem) {
-		width: 100%;
-		font-size: 1.6rem;
+		font-size: 1.9rem;
 	}
 }
 
@@ -85,7 +82,7 @@ header {
 	z-index: 2;
 	top: 0;
 	left: 0;
-	transform: translateX(-100vw);
+	transform: translateX(100vw);
 	visibility: hidden;
 	width: 100%;
 	height: 100vh;
@@ -95,7 +92,7 @@ header {
 	justify-content: center;
 	align-items: center;
 	background: var(--darker);
-	color: var(--paper);
+	color: var(--lightAccent);
 	transition: all .25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
 }
 
@@ -109,11 +106,13 @@ header {
 .main-nav.open li {
 	--delay: 0.1s;
 	opacity: 0;
-	animation: slide_in_left .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
+	animation: slide_in_right .2s cubic-bezier(0.215, 0.610, 0.355, 1) forwards;
 }
 
 .main-nav a {
 	color: inherit;
+  line-height: 2.5;
+  font-size: 1.5rem;
 }
 
 .main-nav li:nth-of-type(1) {
@@ -176,9 +175,6 @@ header {
 	}
 
 	header .main-nav ul {
-		margin: 1rem auto 0;
-		padding-top: 0.5rem;
-		border-top: 1px solid var(--dark);
 		width: max-content;
 	}
 
@@ -189,11 +185,15 @@ header {
 		text-align: initial;
 		margin-bottom: 0;
 	}
+  
+	header .main-nav li a {
+    line-height: inherit;
+  }
 }
 
 footer {
 	background: var(--darker);
-	color: var(--paper);
+	color: var(--lightAccent);
 	display: grid;
 	grid-template-columns: 100%;
 	align-items: stretch;
@@ -235,24 +235,4 @@ footer ul {
 
 footer ul li+li {
 	margin-top: 0.5rem;
-}
-
-.skip-to-content-link {
-	position: absolute;
-	top: -6rem;
-	left: 0;
-	padding: .5em;
-	opacity: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: 3rem;
-	background: var(--darker);
-	color: var(--background);
-}
-
-.skip-to-content-link:focus {
-	transform: translateY(6rem);
-	opacity: 1;
-	z-index: 11;
 }

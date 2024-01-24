@@ -5,7 +5,7 @@
  * PLEASE BE SURE TO UPDATE THEM ALL! Thank you!
  **/ 
 
-export const siteTitle = 'Personal Site Demo'
+export const siteTitle = 'Dylan Hildenbrand'
 export const siteDescription = 'A template for setting up your own personal static website'
 export const siteURL = 'http://localhost:5173'
 export const siteLink = 'http://localhost:5173'
@@ -17,12 +17,14 @@ export const postsPerPage = 10
 // Edit this to alter the main nav menu. (Also used by the footer and mobile nav.)
 export const navItems = [
 	{
-		title: 'Blog',
-		route: '/blog'
-	}, {
 		title: 'About',
 		route: '/about'
-	}, {
+	}, 
+  {
+		title: 'Blog',
+		route: '/blog'
+	},
+  {
 		title: 'Contact',
 		route: '/contact' 
 	},
