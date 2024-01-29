@@ -8,8 +8,8 @@
 export const siteTitle = 'hogoboom.dev';
 export const siteDescription =
   'Full stack web developer and software engineer, experienced primarily with JS and C#';
-export const siteURL = 'http://localhost:5173';
-export const siteLink = 'http://localhost:5173';
+export const siteURL = 'hogoboom.dev';
+export const siteLink = 'http://hogoboom.dev';
 export const siteAuthor = 'Jimmy Hogoboom';
 
 // Controls how many posts are shown per page on the main blog index pages
